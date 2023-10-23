@@ -1,0 +1,137 @@
+.titulo {
+    font-family: 'Arial', sans-serif;
+    color: rgb(121, 119, 119);
+    text-align: center;
+    animation: changeColor 2s linear infinite;
+}
+
+@keyframes changeColor {
+    0% { color: rgb(86, 15, 103); }
+    50% { color: rgb(170, 83, 192); }
+    100% { color: rgb(86, 15, 103); }
+}
+
+.divisor {
+    margin: 20px 0;
+    height: 10px; /* Defina a altura desejada para o elemento divisor */
+    background-image: radial-gradient(circle, #000000 1px, transparent 1px); /* Cria um padrão de várias bolinhas */
+    background-size: 10px 10px; /* Define o tamanho das bolinhas */
+}
+
+.divisor_vertical {
+    border-right: 3px solid rgb(133, 46, 154);
+}
+
+.info-form {
+    margin-left: 20px;
+    margin-right: 20px; /* Adiciona margem à direita */
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-form2 {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Adiciona margem à esquerda */
+}
+
+.info-box {
+    width: 630px;
+    padding: 68px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombreamento à caixa */
+    background: linear-gradient(135deg, #f9d6ff, #fea3e4);
+}
+
+.item_nome,
+.item_telefone,
+.item_direita {
+    margin-bottom: 0; /* Define a margem inferior como 0 */
+}
+
+.titulo_cadastra {
+    font: 20px sans-serif;
+    text-align: center; /* Alinha o título ao centro da caixa */
+    align-self: center; /* Alinha o título ao centro da caixa */
+}
+
+.item_nome {
+    margin-bottom: 20px;
+}
+
+.item_telefone {
+    margin-bottom: 20px;
+}
+
+.item_direita {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Adiciona alinhamento vertical */
+}
+
+.item_direita label {
+    margin-right: 10px;
+}
+
+input {
+    margin-left: 10px; /* Adiciona margem à esquerda para separação do texto */
+}
+
+label {
+    font-family: Impact, sans-serif;
+}
+
+.botao {
+    margin-top: 25px;
+    align-self: center;
+}
+
+.botao button {
+    background-color: #9370DB; /* Define a cor roxa clara para o botão */
+    color: #ffffff; /* Define a cor do texto como branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Adiciona uma transição suave à cor de fundo */
+}
+
+.botao button:hover {
+    background-color: #b235ff; /* Define uma cor roxa um pouco mais clara quando o mouse está em cima */
+}
+
+.container {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+}
+
+.container_medicos {
+    height: 600px;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.box_medico1{
+    height: 250px;
+    width: 600px;
+}
+
+.box_medico2{
+    height: 250px;
+    width: 600px;
+}
+
+span{
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 10px;
+    margin-top: 30px;
+}
