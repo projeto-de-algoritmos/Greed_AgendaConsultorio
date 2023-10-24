@@ -49,12 +49,18 @@
 }
 
 .item_nome,
-.item_telefone,
+.item_sintoma,
 .item_direita {
     margin-bottom: 0; /* Define a margem inferior como 0 */
 }
 
 .titulo_cadastra {
+    font: 30px sans-serif;
+    text-align: center; /* Alinha o título ao centro da caixa */
+    align-self: center; /* Alinha o título ao centro da caixa */
+}
+
+.titulo_explicação {
     font: 20px sans-serif;
     text-align: center; /* Alinha o título ao centro da caixa */
     align-self: center; /* Alinha o título ao centro da caixa */
@@ -124,14 +130,52 @@ label {
     width: 600px;
 }
 
-.box_medico2{
-    height: 250px;
-    width: 600px;
-}
-
 span{
     font-weight: bold;
     font-family: sans-serif;
     margin-left: 10px;
     margin-top: 30px;
 }
+
+.horas{
+    margin-left: 16px;
+}
+
+.box_horario{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    padding-bottom: 0px;
+    height: 100px;
+    background-color: #b6a6b5;
+    width: 540px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.divisor_vertical_pequeno {
+    height: 30px;
+    border-right: 3px solid rgb(0, 0, 0);
+}
+
+.nome_medico{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.box_consulta{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    height: 15px;
+    background-color: #b6a6b5;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 100px;
+}
+
+.pacientes{
+    flex-direction: column;
+}
+
+
