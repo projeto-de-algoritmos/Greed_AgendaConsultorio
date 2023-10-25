@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { getListaPacientes, salvarListaPacientes } from '../backend/utils';
 import './pagInicial.css'
 
 const MyHTMLComponent = () => {
@@ -16,46 +15,38 @@ const MyHTMLComponent = () => {
         { horario: '17h - 18h', pacientes: [] },
     ];
 
-    const [pacientes, setPacientes] = useState(getListaPacientes());
+    const [pacientes, setPacientes] = useState([]);
 
     const handleEnviar = () => {
         const nome = document.getElementById('nome').value;
         const sintoma = document.getElementById('sintoma').value;
         const horario = document.getElementById('horario').value;
         const duracao = document.getElementById('duracao').value;
-    
+
         const novoPaciente = {
             nome,
             sintoma,
             horario,
             duracao,
         };
-    
+
         const novaListaPacientes = [...pacientes, novoPaciente];
         setPacientes(novaListaPacientes);
-        salvarListaPacientes(novaListaPacientes);
-    
+
         // Exibir a notificação de cadastro bem-sucedido
         alert('Paciente cadastrado com sucesso.');
-    
+
         // Limpar os campos do formulário
         document.getElementById('nome').value = '';
         document.getElementById('sintoma').value = '';
         document.getElementById('horario').value = '';
         document.getElementById('duracao').value = '';
-
-        // Para verificar o conteúdo do localStorage
-        console.log(localStorage);
-
-        // Para verificar um item específico do localStorage
-        const listaPacientes = localStorage.getItem('listaPacientes');
-        console.log(listaPacientes);
     };
 
     useEffect(() => {
-        //limpar o localStorage quando der f5
+        // Limpar o localStorage quando a página for recarregada
         window.addEventListener('beforeunload', () => {
-          localStorage.clear();
+            localStorage.clear();
         });
     }, []);
 
@@ -116,7 +107,7 @@ const MyHTMLComponent = () => {
                 </div>
                 ))}
             </div>
-        </div>'
+        </div>
         </div>
     );
 };
