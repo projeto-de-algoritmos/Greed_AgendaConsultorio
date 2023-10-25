@@ -58,32 +58,19 @@ const MyHTMLComponent = () => {
           </div>
       </div>
 
-      <div>
-            <div className="container_consultas flex">
-                <div className="box_medico1">
-                    <span className="flex nome_medico">Dr. Fulano</span>
-                    {consultas.map((consulta, index) => (
-                        <div key={index} className="horas">
-                            <div className="box_horario flex">
-                                <div className="teste flex">
-                                    <span>{consulta.horario}</span>
-                                    <div className="pacientes flex">
-                                        {consulta.pacientes.map((paciente, index) => (
-                                            <div key={index} className="box_consulta">
-                                                <div className="teste2">
-                                                    <span>{paciente}</span>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="divisor_vertical"></div>
+      <div className="horas-container">
+        <div className="titulo-horas">
+            <span className="flex nome_medico">Pacientes</span>
         </div>
+        <div className="horas-list">
+            {consultas.map((consulta, index) => (
+            <div key={index} className="hora">
+                <span className="hora-text">{consulta.horario}</span>
+                {index !== consultas.length - 1 && <span className="separator">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>}
+            </div>
+            ))}
+        </div>
+      </div>'
     </div>
   );
 };
