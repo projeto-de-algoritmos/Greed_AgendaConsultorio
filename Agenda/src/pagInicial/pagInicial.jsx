@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './pagInicial.css'
+import { MinHeap } from '../backend/miniHeap';
 
 const MyHTMLComponent = () => {
     const consultas = [
@@ -16,6 +17,7 @@ const MyHTMLComponent = () => {
     ];
 
     const [pacientes, setPacientes] = useState([]);
+    const heap = new MinHeap();
 
     const handleEnviar = () => {
         const nome = document.getElementById('nome').value;
@@ -30,8 +32,8 @@ const MyHTMLComponent = () => {
             duracao,
         };
 
-        const novaListaPacientes = [...pacientes, novoPaciente];
-        setPacientes(novaListaPacientes);
+        // Insere a nova consulta na fila de prioridade com base no horário
+        heap.push({ ...novoPaciente, weight: horario });
 
         // Exibir a notificação de cadastro bem-sucedido
         alert('Paciente cadastrado com sucesso.');
