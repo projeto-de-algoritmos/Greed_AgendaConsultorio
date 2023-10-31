@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './pagInicial.css'
-import { MinHeap } from '../backend/miniHeap';
+import { MinHeap } from '../backend/minHeap';
 
 const MyHTMLComponent = () => {
     const consultas = [
