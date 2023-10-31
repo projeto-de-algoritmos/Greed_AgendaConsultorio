@@ -4,8 +4,6 @@ import { intervalPartitioning } from '../backend/intervalPartioning';
 import { AgendaDisplay } from '../agendaDisplay/agendaDisplay';
 
 const MyHTMLComponent = () => {
-        { horario: '13h - 14h', pacientes: ['Médico em horário de almoço.'] },
-        { horario: '14h - 15h', pacientes: [] },
 
     const [consultas, setConsultas] = useState([]);
     const [pacientes, setPacientes] = useState([]);
