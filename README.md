@@ -20,11 +20,11 @@ O objetivo do projeto foi criar uma agenda temática utilizando o algoritmo de *
 
 ## Screenshots
 
-![screenshot 1 do projeto](/agenda/src/assets/screenshot1.png)
+![screenshot 1 do projeto](/Agenda/src/assets/screenshot1.png)
 
-![screenshot 2 do projeto](/agenda/src/assets/screenshot2.png)
+![screenshot 2 do projeto](/Agenda/src/assets/screenshot2.png)
 
-![screenshot 3 do projeto](/agenda/src/assets/screenshot3.png)
+![screenshot 3 do projeto](/Agenda/src/assets/screenshot3.png)
 
 ## Instalação 
 **Linguagem**: Javascript<br>
